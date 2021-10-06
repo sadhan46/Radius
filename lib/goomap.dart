@@ -126,57 +126,6 @@ class _GooMapState extends State<GooMap> {
                     ],
                   ),
             )),
-            /*
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: ElevatedButton(
-                  //color: Colors.black54,
-                  onPressed: () {
-                    _isCircle = true;
-                    radius = 50;
-                    return showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          backgroundColor: Colors.grey[900],
-                          title: Text(
-                            'Choose the radius (m)',
-                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                          ),
-                          content: Padding(
-                              padding: EdgeInsets.all(8),
-                              child: Material(
-                                color: Colors.black,
-                                child: TextField(
-                                  style: TextStyle(fontSize: 16, color: Colors.white),
-                                  decoration: InputDecoration(
-                                    icon: Icon(Icons.zoom_out_map),
-                                    hintText: 'Ex: 100',
-                                    suffixText: 'meters',
-                                  ),
-                                  keyboardType:
-                                  TextInputType.numberWithOptions(),
-                                  onChanged: (input) {
-                                    setState(() {
-                                      radius = double.parse(input);
-                                    });
-                                  },
-                                ),
-                              )),
-                          actions: <Widget>[
-                            TextButton(
-                                onPressed: () => Navigator.pop(context),
-                                child: Text(
-                                  'Ok',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,),
-                                )),
-                          ],
-                        ));
-                  },
-                  child: Text('Circle',
-                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
-            )
-              */
           ],
         ));
   }
