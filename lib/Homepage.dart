@@ -20,7 +20,6 @@ class _HomePageState extends State<HomePage> {
     _checkLocationPermission();
   }
 
-  // Check Location Permissions, and get my location
   void _checkLocationPermission() async {
     _serviceEnabled = await location.serviceEnabled();
     if (!_serviceEnabled) {

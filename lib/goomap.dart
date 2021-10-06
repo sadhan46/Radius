@@ -15,29 +15,22 @@ class GooMap extends StatefulWidget {
 }
 
 class _GooMapState extends State<GooMap> {
-  // Location
   LocationData _locationData;
 
-  // Maps
   Set<Circle> _circles = HashSet<Circle>();
   List<LatLng> polygonLatLngs = List<LatLng>();
   double radius;
 
-  //ids
   int _circleIdCounter = 1;
 
-  // Type controllers
   bool _isCircle = false;
 
   @override
   void initState() {
     super.initState();
-    // If I want to change the marker icon:
-    // _setMarkerIcon();
     _locationData = widget.location;
   }
 
-  // Set circles as points to the map
   void _setCircles(LatLng point) {
     final String circleIdVal = 'circle_id_$_circleIdCounter';
     _circleIdCounter++;
@@ -80,9 +73,7 @@ class _GooMapState extends State<GooMap> {
                       zoom: 16,
                     ),
                     mapType: MapType.hybrid,
-                    //markers: _markers,
                     circles: _circles,
-                    //polygons: _polygons,
                     myLocationEnabled: true,
                     onTap: (point) {if (_isCircle) {
                         setState(() {
@@ -122,7 +113,6 @@ class _GooMapState extends State<GooMap> {
                               });
                             }
                           )),
-                      //ElevatedButton(onPressed: , child: child)
                     ],
                   ),
             )),
